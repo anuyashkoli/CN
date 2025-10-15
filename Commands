@@ -1,0 +1,26 @@
+Experiment 2: Basic Networking Commands
+ipconfig ping 192.168.1.2 tracert 192.168.1.2 arp -a
+
+Experiment 3: Hub vs. Switch
+(This experiment is graphical and performed using the mouse in Packet Tracer's Simulation Mode; it does not use typed commands.)
+
+Experiment 4: Network Discovery with Nmap
+ipconfig nmap -sL <network_range> nmap -PS <target_ip> nmap -PA <target_ip> nmap --traceroute google.com
+
+Experiment 5: Wireshark Packet Analysis
+ping www.google.com ipconfig /release ipconfig /renew
+
+Experiment 7: NS-3 Installation (Ubuntu)
+sudo apt update sudo apt install gcc g++ python3 python3-dev pkg-config sqlite3 git build-essential git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3 cd ns-3 ./ns3 configure --enable-examples --enable-tests ./ns3 build ./ns3 run hello-simulator
+
+Experiment 9: Configuring RIP
+enable configure terminal router rip network <network_address_1> network <network_address_2> end show ip route
+
+Experiment 10: Socket Programming
+python server.py python client.py
+
+Experiment 11: File Transfer using FTP
+ping 192.168.2.2 ftp 192.168.2.2 put sample.txt dir
+
+Experiment 12: Remote Login Using Telnet
+enable configure terminal interface GigabitEthernet0/0 ip address 192.168.1.1 255.255.255.0 no shutdown exit line vty 0 4 password cisco login exit enable password class end ping 192.168.1.1 telnet 192.168.1.1
