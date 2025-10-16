@@ -1,0 +1,6 @@
+ping 192.168.0.1
+tracert 
+nslookup wwww.google.com
+ip config 
+netstat -a , -r
+tracert google.com

@@ -1,0 +1,24 @@
+3. Steps to Configure Telnet in Cisco Packet Tracer
+• Step 1: Assign IP Address:
+Router> enable
+Router# configure terminal
+Router(config)# interface fastEthernet 0/0
+Router(config-if)# ip address 192.168.1.1 255.255.255.0
+Router(config-if)# no shutdown
+• Step 2: Set VTY Password:
+Router(config)# line vty 0 4
+Router(config-line)# password cisco
+Router(config-line)# login
+
+• Step 3: Set Enable Password:
+Router(config)# enable password class
+• Step 4 (Optional): Create Local User:
+Router(config)# username admin password admin123
+Router(config)# line vty 0 4
+Router(config-line)# login local
+
+• Step 5: Test Connection:
+On PC → Command Prompt:
+ping 192.168.1.1
+telnet 192.168.1.1
+Enter username/password → Access router CLI remotely.

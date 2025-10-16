@@ -1,0 +1,31 @@
+Step 1: Update System Packages
+sudo apt update && sudo apt upgrade -y
+
+
+2. Step 2: Install Dependencies
+sudo apt install gcc g++ python3 python3-dev pkg-config sqlite3 \
+git mercurial qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools \
+
+libgtk-3-dev libxml2 libxml2-dev libsqlite3-dev \
+build-essential cmake ninja-build ccache -y
+
+
+
+
+
+3. Step 3: Download NS-3 Source Code
+cd ~
+git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3
+cd ns-3
+
+
+4. Step 4: Configure and Build NS-3
+./ns3 configure --enable-examples --enable-tests
+./ns3 build
+
+
+5. Step 5: Verify Installation
+./ns3 run hello-simulator
+
+If successful, it will display:
+Hello Simulator
